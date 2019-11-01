@@ -40,6 +40,7 @@ public class DuplicateRemover {
             while (in.hasNext()) {
                 uniqueWords.add(in.next());
             }
+            in.close();
 
         } catch (IOException excpt) {
             System.out.println("Error opening file: " + excpt.getMessage());
@@ -60,6 +61,7 @@ public class DuplicateRemover {
                 pen.println(it.next());
             }
             pen.flush();
+            pen.close();
 
         } catch (IOException excpt) {
             System.out.println("Error opening file: " + excpt.getMessage());
